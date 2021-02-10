@@ -68,7 +68,18 @@ class Playlist:
   # TODO: Create a method called length, which returns the number of songs in the playlist.
 
   def length(self):
-    pass
+    print("=" * 90)
+
+    num_songs = 0
+    current_song = self.__first_song
+
+    while current_song != None:
+      num_songs += 1 
+      current_song = current_song.get_next_song()
+
+    print("=" * 90)
+
+    return num_songs
 
 
   # TODO: Create a method called print_songs that prints a numbered list of the songs in the playlist.
