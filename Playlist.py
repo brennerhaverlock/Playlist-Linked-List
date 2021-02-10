@@ -90,6 +90,15 @@ class Playlist:
   # 3. Song Title 3
 
   def print_songs(self):
-    pass
+    print("=" * 90)
+
+    lst = 0
+    song_file = self.__first_song
+    while song_file != None:
+      lst += 1
+      print(f"# {lst}. {song_file}")
+      song_file = song_file.get_next_song()
+
+    print("=" * 90)
 
   
