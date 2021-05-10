@@ -24,18 +24,18 @@ class Playlist:
 
   def find_song(self, title):
 
-    song_counter = 0
+    song_num = 0
     current_song = self.__first_song
 
     while current_song.get_title() != title:
-      song_counter += 1
+      song_num += 1
       current_song = current_song.get_next_song()
 
       if current_song == None:
         return -1
 
     if current_song.get_title() == title:
-      return song_counter
+      return song_num
 
 
   # TODO: Create a method called remove_song that removes a song from the playlist. This method takes one parameter, title, which is the song that should be removed. 
